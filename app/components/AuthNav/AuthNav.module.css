@@ -1,0 +1,11 @@
+.listAuthNav{
+    display: flex;
+    list-style-type: none;
+    gap: 22px;
+    align-items: center;
+}
+
+
+.iconListAuthNav{
+    cursor: pointer;
+}

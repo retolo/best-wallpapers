@@ -1,0 +1,38 @@
+.header{
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navigation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 600px;
+    color: #fff;
+    font-family: var(--font-family);
+    font-size: 16pt;
+    
+}
+
+
+
+.icon{
+    padding-top: 16px;
+    
+}
+
+.navigationList{
+    list-style-type: none;
+    display: flex;
+    gap: 12px;
+    
+}

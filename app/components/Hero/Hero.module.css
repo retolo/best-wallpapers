@@ -1,0 +1,56 @@
+.container{
+    max-width: 1200px;
+    margin:  0 auto;
+}
+
+
+.heroHeader{
+    font-family: var(--font-family);
+    font-size: 58pt;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+    color: #fff;
+
+}
+
+.hero{
+    background-image: url('/hero-background-three.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+        display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    
+
+}
+
+
+.heroText{
+    font-family: var(--font-family);
+    font-size: 24pt;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+    padding-top: 20px;
+    color: #fff;
+}
+
+.heroButton{
+    cursor: pointer;
+    font-family: var(--font-family);
+    background-color: #fff;
+    font-size: 12pt;
+    border: none;
+    width: 200px;
+    height: 50px;
+    margin-top: 10px;
+}
+
+.heroBlock{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
