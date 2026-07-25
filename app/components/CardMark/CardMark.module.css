@@ -1,0 +1,342 @@
+.container{
+    display: flex;
+    align-items: center;
+    gap: 600px;
+    
+}
+
+
+.price{
+    color: black;
+}
+
+
+
+.iconArrow{
+    cursor: pointer;
+}
+
+
+.headerPayment{
+    font-family: var(--font-family);
+    font-size: 38pt;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+    margin-bottom: 8px;
+
+}
+
+.price{
+    font-family: var(--font-family);
+    font-size: 18pt;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+
+}
+
+
+.priceUnder{
+    text-decoration: line-through;
+}
+
+.addText{
+    font-family: var(--font-family);
+    font-size: 12pt;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+  
+}
+
+.paymentInfo{
+    font-family: var(--font-family);
+    font-size: 12pt;
+    letter-spacing: 0.04em;
+    line-height: 1.5;   
+    font-weight: 600;
+    margin-bottom: 100px;
+}
+
+.learText{
+    text-decoration: underline;
+    cursor: pointer;
+    text-align: center;
+}
+
+.firstChar{
+    margin-bottom: 50px;
+    
+}
+
+
+.buttonBlock{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 10px;
+}
+
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.addButton{
+    width: 200px;
+    height: 50px;
+    background-color: black;
+    color: #fff;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+
+.buyButton{
+    width: 200px;
+    cursor: pointer;
+    height: 50px;
+    background-color: rgb(164, 25, 199);
+    color: #fff;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;   
+}
+
+
+.buttonsText{
+    font-family: var(--font-family);
+    font-size: 8pt;
+    letter-spacing: 0.04em;
+    line-height: 1.5;   
+    text-decoration: underline;
+    margin-left: 400px;   
+    margin-bottom: 70px;
+    cursor: pointer;
+}
+
+.descrText{
+    margin-top: 8px;
+    color: gray;
+    margin-bottom: 8px;
+}
+
+
+.descrBlock{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.descrInfo{
+    max-width: 300px;
+    margin-top: 14px;
+    margin-bottom: 8px;
+    max-height: 400px;
+}
+
+
+
+
+
+.descrHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    cursor: pointer;
+}
+
+.descrContent {
+    max-width: 400px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .4s ease;
+}
+
+.descrContent.open {
+    max-height: 500px; 
+}
+
+.descrInfo {
+    padding-bottom: 15px;
+}
+
+
+
+.paragraph {
+    margin-bottom: 32px;
+}
+
+.paragraph strong {
+    font-weight: 700;
+}
+
+.title {
+    margin: 48px 0 20px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #000;
+}
+
+.list {
+    margin: 0 0 48px 28px;
+    padding-left: 22px;
+}
+
+.list li {
+    margin-bottom: 10px;
+    line-height: 1.7;
+}
+
+.secondContainer{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.listCollections{
+    list-style-type: none;
+    display: flex;
+    gap: 44px;
+    justify-content: center;
+    margin-top: 10px;
+}
+.blockPopularCollections{
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+}
+
+.textBlockParagraph{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12pt;
+    letter-spacing: -0.04em;
+    line-height: 1.5;   
+}
+
+
+.thirdBlock{
+    display: flex;
+    /* flex-direction: column; */
+    gap: 100px;
+    justify-content: flex-end;
+    margin-bottom: 70px;
+}
+
+.collections{
+    margin-bottom: 40px;
+
+    border-bottom: 1px solid black;
+}
+
+
+.nameWallPapers{
+    font-family: var(--font-family);
+    padding-top: 8px;
+    letter-spacing: -0.04em;
+    line-height: 1.5;
+    /* margin-top: 500px; */
+    
+}
+
+.priceWallpapers{
+    font-family: var(--font-family);
+
+    letter-spacing: -0.04em;
+    line-height: 1.5;  
+}
+
+.OldPrice{
+    text-decoration: line-through;
+    padding-left: 4px;
+}
+
+.ImageWrapper{
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+}
+
+.listCollectionsElement{
+    cursor: pointer;
+    transition: transform ease 0.2s;
+    position: relative;
+    overflow: hidden;
+    width: 351;
+    
+
+}
+
+
+.defaultImage,
+.hoverImage{
+    object-fit: cover;
+    transition: opacity 0.35s ease;
+
+    z-index: 1;
+
+
+}
+.defaultImage{
+    opacity: 1;
+}
+
+.hoverImage{
+    opacity: 0;
+}
+
+.ImageWrapper:hover .defaultImage{
+    opacity: 0;
+}
+
+.ImageWrapper:hover .hoverImage{
+    opacity: 1;
+}
+
+
+.listCollectionsElement:hover{
+    transform: translateY(-5px);
+}
+
+.nameWallPapers,
+.priceWallpapers {
+    position: relative;
+    z-index: 2;
+}
+
+
+.saleText{
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 10px;
+    z-index: 999;
+    width: 55px;
+    height: 30px;
+    /* border: 1px solid black; */
+    background-color: #4d4a4a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.likeText{
+    text-align: center;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 26pt;
+    letter-spacing: -0.04em;
+    line-height: 1.5;
+    margin-top: 14px;
+    margin-bottom: 14px; 
+}

@@ -6,8 +6,15 @@
   --font-family: "Cormorant Garamond", serif;
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
-
+.mySwiper{
+  width: 1040px;
+}
 
 @media (prefers-color-scheme: dark) {
   :root {

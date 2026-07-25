@@ -6,6 +6,7 @@ import AuthNav from '../AuthNav/AuthNav'
 export default function Header(){
     return(
         <>
+            
             <header className={css.header}>
                 <div className={css.container}>
 
@@ -24,7 +25,7 @@ export default function Header(){
                             </li>
                         </ul>
 
-                        <Image className={css.icon} src={'/BestWallPapersLogo.png'} alt='Logo of the shop' width={130} height={130}/>
+                        <Image className={css.icon} src={'/BestWallPapersLogo.png'} alt='Logo of the shop' width={100} height={100}/>
                         
                         <AuthNav/>
 
