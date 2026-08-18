@@ -1,0 +1,45 @@
+.container{
+    max-width: 1200px;
+    margin:  0 auto;
+}
+
+
+.askHeader{
+    font-family: var(--font-family);
+    font-size: 32pt;
+    padding-bottom: 34px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+}
+
+
+.askList{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 150px;
+}
+.askListElem{
+    border-top: 1px solid black;
+    padding: 10 10 10 0;
+    
+}
+
+.askListElem:last-child{
+    border-bottom: 1px solid black;
+}
+.accordionDetails{
+    font-family: var(--font-family);
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+    font-size: 12pt;
+}
+
+.accordionSum{
+    list-style: none;
+    font-size: 16pt;
+    font-weight: 550;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}

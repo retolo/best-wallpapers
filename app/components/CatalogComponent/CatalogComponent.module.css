@@ -1,0 +1,149 @@
+.container{
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.catalogHeader{
+    margin-bottom: 60px;
+    font-family: var(--font-family);
+    font-size: 38pt;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+}
+
+
+
+.ImageWrapper{
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+}
+
+.catalogList{
+    display: flex;
+    gap: 70px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+
+}
+
+.blockCatalog{
+    margin-top: 300px;
+}
+
+
+.footerBlock{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.footerText{
+    font-family: var(--font-family);
+    line-height: 1.5;
+    
+}
+
+.listCatalogElement{
+    cursor: pointer;
+    transition: transform ease 0.2s;
+    position: relative;
+    overflow: hidden;
+    width: 351;
+    
+
+}
+.priceWallpapers{
+    font-family: var(--font-family);
+    
+    letter-spacing: -0.04em;
+    line-height: 1.5;  
+}
+.nameWallPapers{
+    font-family: var(--font-family);
+    padding-top: 8px;
+    letter-spacing: -0.04em;
+    line-height: 1.5;
+    /* margin-top: 500px; */
+    
+}
+
+.OldPrice{
+    text-decoration: line-through;
+    padding-left: 4px;
+}
+
+
+.defaultImage,
+.hoverImage{
+    object-fit: cover;
+    transition: opacity 0.35s ease;
+
+    z-index: 1;
+
+
+}
+.defaultImage{
+    opacity: 1;
+}
+
+.hoverImage{
+    opacity: 0;
+}
+
+.ImageWrapper:hover .defaultImage{
+    opacity: 0;
+}
+
+.ImageWrapper:hover .hoverImage{
+    opacity: 1;
+}
+
+
+.listCatalogElement:hover{
+    transform: translateY(-5px);
+}
+
+.nameWallPapers,
+.priceWallpapers {
+    position: relative;
+    z-index: 2;
+}
+
+
+.block{
+    overflow: hidden;
+    width: 100%;
+}
+
+
+.track{
+    display: flex;
+    width: max-content;
+    animation:  running-text 30s linear infinite;
+}
+
+.text{
+    white-space: nowrap;
+    padding-right: 50px;
+}
+
+
+
+.saleText{
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 10px;
+    z-index: 999;
+    width: 55px;
+    height: 30px;
+    /* border: 1px solid black; */
+    background-color: #4d4a4a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}

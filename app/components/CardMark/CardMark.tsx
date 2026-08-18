@@ -10,6 +10,7 @@ import { useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ItemsMarkType } from "@/app/types/types";
+import { CartStore } from "@/app/Stores/cartStore";
 type CardMarkProps = {
     id: string
 }
@@ -17,16 +18,16 @@ type CardMarkProps = {
 export default function CardMark({id}: CardMarkProps){
 
 
-
-
+    
+    const cryptoId = crypto.randomUUID();
     const [isClicked, setIsClicked] = useState<boolean>(false)
-
+    const {items, setItemCart} = CartStore();
     const wallPaper = useMemo(() =>{
         return itemsMark.find((item) => item.id === id)
     }, [id])
 
     console.log(wallPaper)
-
+    
 
 
 
@@ -37,9 +38,9 @@ export default function CardMark({id}: CardMarkProps){
             setIsClicked(true)
         }
     }
+    
 
-
-
+    
 
 
     return(
@@ -87,7 +88,7 @@ export default function CardMark({id}: CardMarkProps){
                         <hr className={css.firstChar}/>
                         
                         <div className={css.buttonBlock}>
-                            <button className={css.addButton} type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-bag-plus" viewBox="0 0 16 16">
+                            <button onClick={() => setItemCart(wallPaper !== undefined ? {id: `${wallPaper.id}-${cryptoId}`, img: wallPaper.img, underImg: wallPaper.underImg, price: wallPaper.price, name: wallPaper.name} : {id: `${itemsMark[0].id}-${cryptoId}`, img: itemsMark[0].img, underImg: itemsMark[0].underImg, price: itemsMark[0].price, name: itemsMark[0].name})} className={css.addButton} type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-bag-plus" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5"/>
                                 <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
                                 </svg>ADD TO CART</button>
@@ -174,25 +175,6 @@ export default function CardMark({id}: CardMarkProps){
 
 
 
-                {/* <div className={css.secondContainer}>
-                    <p className={css.likeText}>You may also like</p>
-
-                    <ul className={css.listCardMark}>
-                        {itemsMark.map((item: ItemsMarkType) =>(
-                            <li className={css.listCardMarkElement} key={item.id}>
-                                <p className={css.saleText}>Sale</p>
-                                    <div className={css.ImageWrapper}>
-                                        <Link href={`/card/${item.id}`}><Image src={item.img} className={css.defaultImage} fill  alt='portrait_pic_1' /></Link>
-                                        <Link href={`/card/${item.id}`}><Image src={item.underImg} className={css.hoverImage} fill  alt='under-portrait-1' /></Link>
-                                    </div>
-
-                                    <p className={css.nameWallPapers}>{item.name}</p>
-                                    <p className={css.priceWallpapers}>{item.price.split(' ')[0]}<span className={css.OldPrice}>{item.price.split(' ')[1]}</span></p>
-                            </li>
-                                ))}
-                    </ul>
-
-                </div> */}
 
                 <div className={css.secondContainer}>
                     <p className={css.likeText}>You may also like</p>
