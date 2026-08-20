@@ -2,8 +2,12 @@
 import css from './Login.module.css'
 import Link from 'next/link'
 import { useRouter } from "next/navigation";
-
+import { useState } from 'react';
+import PrivacyModal from '@/app/components/PrivacyModal/PrivacyModal';
 export default function Login(){
+
+    const [isOpenModal, setIsOpenModal] = useState<boolean>(false)
+
     const router = useRouter();
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) =>{
         const form = event.currentTarget;
@@ -52,10 +56,13 @@ export default function Login(){
 
                 </form>
 
-                <Link href={'/privacy'}><p className={css.policy}>Privacy policy</p></Link>
+                <p className={css.policy} onClick={() => setIsOpenModal(true)}>Privacy policy</p>
 
             </div>
 
+            
+            <PrivacyModal isOpenModal={isOpenModal} onClose={() => setIsOpenModal(false)}/>
+            
         </section>
     )
 }
